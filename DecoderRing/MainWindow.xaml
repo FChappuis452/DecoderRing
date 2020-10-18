@@ -1,0 +1,82 @@
+﻿<Window x:Class="DecoderRing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DecoderRing"
+        mc:Ignorable="d"
+        Title="Encode Decode" Height="450" Width="763">
+    <Grid>
+        <Label 
+            Content="Enter Text:" 
+            HorizontalAlignment="Left" 
+            Margin="191,12,0,0" 
+            VerticalAlignment="Top"
+        />
+
+        <TextBox 
+            x:Name="inputTxtBx" 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="260,14,0,0" 
+            TextWrapping="Wrap" 
+            Text="Enter Text Here" 
+            VerticalAlignment="Top" 
+            Width="311" 
+            GotFocus="inputTxtBx_GotFocus" 
+        />
+
+        <Button 
+            x:Name="encodeBtn" 
+            Content="Encode" 
+            HorizontalAlignment="Left" 
+            Margin="583,14,0,0" 
+            VerticalAlignment="Top" 
+            Width="75" 
+            Height="22" 
+            Click="encodeBtn_Click"
+        />
+
+        <Button 
+            x:Name="decodeBtn"
+            Content="Decode" 
+            Margin="672,14,10,0" 
+            VerticalAlignment="Top" 
+            Height="22" 
+            Click="decodeBtn_Click"
+        />
+
+        <TextBox 
+            x:Name="outputTxtBx" 
+            HorizontalAlignment="Left" 
+            Height="140" 
+            Margin="10,80,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="555"
+            Background="Transparent"
+            BorderThickness="0"
+            Text="{Binding Text, Mode=OneWay}"
+            IsReadOnly="True"
+        />
+        <Label 
+            Content="Key" 
+            HorizontalAlignment="Left" 
+            Margin="10,10,0,0" 
+            VerticalAlignment="Top"
+        />
+        
+        <TextBox 
+            x:Name="keyTxtBx" 
+            HorizontalAlignment="Left" 
+            Height="23" 
+            Margin="44,12,0,0" 
+            TextWrapping="Wrap" 
+            Text="Enter Key" 
+            VerticalAlignment="Top" 
+            Width="120"
+            GotFocus="keyTxtBx_GotFocus"
+        />
+
+    </Grid>
+</Window>
